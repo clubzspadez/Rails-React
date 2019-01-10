@@ -2,16 +2,18 @@
 
 one:
   id: 1
+  title: MyString
   description: MyString
   author: MyString
-  tags: 
+  tags: MyString
   created_at: MyString
   updated_at: MyString
 
 two:
   id: 1
+  title: MyString
   description: MyString
   author: MyString
-  tags: 
+  tags: MyString
   created_at: MyString
   updated_at: MyString
