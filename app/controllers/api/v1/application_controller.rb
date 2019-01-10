@@ -1,6 +1,6 @@
 module Api
-    module V1
-        class ApplicationController < ActionController::API
+    module v1
+        class ApplicationController < ActionController:: Api
             include ActionController::MimeResponds
         end
     end
