@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_01_09_012424) do
 
   create_table "articles", id: false, force: :cascade do |t|
     t.integer "id"
+    t.string "title"
     t.string "description"
     t.string "author"
     t.string "tags", default: [], array: true

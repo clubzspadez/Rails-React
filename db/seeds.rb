@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'csv'
+
+Article.create({title: ‘Hello world’,content: ‘lorem ipso’,slug: ‘hello-world’})
+
+# csv_text = File.read(Rails.root.join('lib', 'seeds', 'import.csv'))
+# csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+# csv.each do |row|
+#   t = Article.new
+#   t.id = row['id']
+#   t.title = row['title']
+#   t.description = row['description']
+#   t.author = row['author']
+#   t.tags = row['tags']
+#   t.created_at = row['created_at']
+#   t.updated_at = row['updated_at']
+#   t.save
+# end
+
+puts "There are now #{Article.count} rows in the articles table"
