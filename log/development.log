@@ -1,0 +1,1086 @@
+Started GET "/" for 127.0.0.1 at 2019-01-09 20:36:01 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "backendapi_development" does not exist
+):
+  
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (328.9ms)[0m  [1m[35mCREATE DATABASE "backendapi_development" ENCODING = 'unicode'[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (267.5ms)[0m  [1m[35mCREATE DATABASE "backendapi_test" ENCODING = 'unicode'[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (18.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateArticles (20190110013135)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateArticles (20190110013135)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateArticles (20190110013135)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateArticles (20190110013135)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE "articles" ("id" bigserial primary key, "title" character varying, "description" character varying, "author" character varying, "tags" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190110013135_create_articles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190110013135"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-10 01:39:56.800417"], ["updated_at", "2019-01-10 01:39:56.800417"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 1], ["title", "Brazil opens vast Amazon reserve to mining"], ["description", "Brazil's government has abolished a vast national reserve in the Amazon to open up the area to mining.\nThe area, covering 46,000 sq km (17,800 sq miles), straddles the northern states of Amapa and Para, and is thought to be rich in gold, and other minerals.\nThe government said nine conservation and indigenous land areas within it would continue to be legally protected.\nBut activists have voiced concern that these areas could be badly compromised.\nA decree from President Michel Temer abolished a protected area known as the National Reserve of Copper and Associates (Renca).\nIts size is larger than Denmark and about 30% of it will be open to mining.\nThe mining and energy ministry says protected forest areas and indigenous reserves will not be affected.\n\"The objective of the measure is to attract new investments, generating wealth for the country and employment and income for society, always based on the precepts of sustainability,\" the ministry said in a statement.\n"], ["author", "BBC"], ["tags", "Brazil, amazon"], ["created_at", "2019-01-10 01:43:13.692544"], ["updated_at", "2019-01-10 01:43:13.692544"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 2], ["title", "Google will ask: 'Are you depressed?'"], ["description", "People searching for “depression” on Google will soon be prompted to take a questionnaire to assess if they may be suffering from the illness.\nThe search giant has partnered with the US National Alliance on Mental Illness (Nami) to roll out the project which is currently only for US users.\nUsers searching for depression will be prompted to “check if you’re clinically depressed”.\n“While this tool can help, it’s important to note that PHQ-9 is not meant to act as a singular tool for diagnosis,” Nami said.\nIn a blog post announcing the news, Nami said the test should not be seen as replacing the insight of qualified mental health professionals - was instead a method to help people get the right help more quickly.\n\"By tapping “Check if you’re clinically depressed,” you can take this private self-assessment to help determine your level of depression and the need for an in-person evaluation,” the organisation explained.\n\"The results of the PHQ-9 can help you have a more informed conversation with your doctor.\"\n'Trouble concentrating?'\nThe question will appear in the Knowledge Panel - the box that appears at the top of results when users search on a mobile device. Typically this panel is used for factual information, including details drawn from Wikipedia entries.\nThe Patient Health Questionnaire-9 is a series of nine questions about the subject’s mental health.\nIt asks how often you feel you have “little interest or pleasure in doing things” or “trouble concentrating on things, such as reading the newspaper or watching television?”.\nVarious studies have concluded it is a concise, reliable way to accurately detect signs of clinical depression.\nSpeaking to the Financial Times, Google product manager Vidushi Tekriwal said users who fill out the test will not have their answers logged by the company, nor would advertising be targeted to them as a result.\nHowever, one psychotherapist said the idea seemed \"terribly redundant\".\nSomeone googling depression will probably not find more useful information via a short diagnostic than they have already surfaced in search results, argued Dr Aaron Balick, author of \"The Psychodynamics of Social Netowrking\".\n\"A better approach would be some sort of acknowledgment that the searcher may be feeling down, and offering them resources and a direct line - perhaps a chat box - to local psychological services,\" he told the BBC.\n"], ["author", "Dave Lee"], ["tags", "Google, depression"], ["created_at", "2019-01-10 01:43:13.701009"], ["updated_at", "2019-01-10 01:43:13.701009"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 3], ["title", "Wayne Rooney international retirement: How will history judge his England career?"], ["description", "Wayne Rooney's retirement from international duty - announced after England's all-time record goalscorer had been told he had won a recall at 31 - closes another chapter in his illustrious story.\nRooney, with 53 England goals in 119 appearances, left Manchester United to return to Everton this summer with his place in Old Trafford's history books also assured after he overtook Sir Bobby Charlton's club record with 253 goals.\nHe had been sidelined by Jose Mourinho at United, and also by Southgate with England, but such has been his early rejuvenation at Goodison Park that he was offered a place back in the fold for the forthcoming World Cup qualifiers against Malta and Slovakia.\nRooney, who originally planned to end his England career after next summer's World Cup in Russia, decided against a return and will now focus fully on Everton.\nSo how will history judge Wayne Rooney's England career?\n"], ["author", "BBC Sport"], ["tags", "Rooney, England, Soccer"], ["created_at", "2019-01-10 01:43:13.705153"], ["updated_at", "2019-01-10 01:43:13.705153"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 4], ["title", "US Open: Milos Raonic withdraws because of wrist injury"], ["description", "World number 11 Milos Raonic is the latest high-profile player to pull out of the US Open, which starts on Monday.\nCanadian Raonic, 26, has withdrawn because of a persistent wrist injury but said that he planned to return to action before the end of 2017.\nDefending champion Stan Wawrinka is unable to defend his singles title at Flushing Meadows because of a knee injury.\nNovak Djokovic (elbow) and Victoria Azarenka will also be absent.\nBelarusian Azarenka, 28, is missing the final Grand Slam of the year because of an \"ongoing family situation\".\nWorld number 10 Kei Nishikori is also out after tearing a tendon in his right wrist.\nRaonic said he was unable give \"full effort\" as a result of his injury.\n\"I have too much respect for the US Open and my fellow competitors to take a spot in the draw when I know I cannot give full effort due to this injury,\" he said.\n"], ["author", "BBB Sports"], ["tags", "US Open, Tennis, Raonic"], ["created_at", "2019-01-10 01:43:13.708579"], ["updated_at", "2019-01-10 01:43:13.708579"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 5], ["title", "Billionaires and big ag are joining venture investors to fund lab-grown meat\n"], ["description", "Eighty-five years ago, Winston Churchill wrote an article for Popular Mechanics that predicted humans would soon be growing their meat rather than cultivating animals for it.\nNow, with $17 million in fresh financing from a slew of new investors, including the billionaires Bill Gates and Richard Branson, the big agriculture company Cargill and the venture capital firm DFJ, Memphis Meats is hoping to create an entirely new industry around what it calls “clean meat.”\n“Instead of using animals as pieces of technology to convert plants into proteins to make things that we like to eat, drink and wear, we can just use biology to make those things directly,” said Seth Bannon, a co-founder of the upstart venture firm Fifty Years and an early investor in Memphis Meats.\nThe company has already successfully made synthesized beef, chicken and duck, according to Memphis Meats co-founder and chief executive Uma Valeti. Now the trick is to get the company to grow their meat at scale.\n“We envision this to be a production facility where people can walk through and see where the meat is growing, where it is being harvested and where it is being cooked. You don’t get to visit feed lots or visit slaughterhouses,” Valeti tells me.\nValeti imagines a production facility that looks more like a craft brewery than a slaughterhouse. It also would represent the first major innovation in the meat industry in the 10,000 years since humans first began breeding livestock.\nIn a 2002 article for The New York Times Magazine, journalist Michael Pollan described how cows are slaughtered. \nThe cows are funneled into a chute single-file. Once there, they are walked over a metal bar, and, as the floor declines, the cows are suspended over a false floor on the bar and then taken on a conveyor belt to pass in front of a slaughterhouse employee called a “stunner.”\nThe stunner’s job is to shoot a seven-inch steel bolt, roughly the width of a pencil, between the eyes of the drugged and incapacitated cow.\nThen the dead animal is moved from the conveyor belt to a trolley overhead and carried to the bleeding area, where its throat is cut. Roughly 392 cows are slaughtered per hour at a typical slaughterhouse (like the one in Kansas that Pollan described).\nThis is the culmination of human achievement in meat processing so far (don’t even get me started on chickens).\n"], ["author", "TechCrunch"], ["tags", "Billionaires, Ventures"], ["created_at", "2019-01-10 01:43:13.711555"], ["updated_at", "2019-01-10 01:43:13.711555"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 6], ["title", "Thanks to Amazon, Seattle is now America’s biggest company town\n"], ["description", "Amazon’s extraordinary growth has turned Seattle into the biggest company town in America.\nAmazon now occupies a mind-boggling 19 percent of all prime office space in the city, the most for any employer in a major U.S. city, according to a new analysis conducted for The Seattle Times.\n\nAmazon’s footprint in Seattle is more than twice as large as any other company in any other big U.S. city, and the e-commerce giant’s expansion here is just getting started.\n\nThe swarms of 20-somethings crowding into South Lake Union every morning represent an urban campus that is unparalleled in the United States — and they have helped transform Seattle, for better or worse. Amazon’s rapid rise has fueled an economy that has driven up wages and lowered unemployment, but also produced gridlock on the roads and sky-high housing prices.\nAnd while Seattle’s booming economy is often attributed to a wide variety of factors, increasingly, it’s all about one company.\nAmazon now occupies more office space than the next 40 biggest employers in the city combined.\nAnd that’s only the beginning: Amazon’s Seattle footprint of 8.1 million square feet is expected to soar to more than 12 million square feet within five years.\n"], ["author", "Amazon"], ["tags", "Amazon, Seattle"], ["created_at", "2019-01-10 01:43:13.714847"], ["updated_at", "2019-01-10 01:43:13.714847"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 7], ["title", "This is How Google will Collapse"], ["description", "Google made almost all its money from ads. It was a booming business — until it wasn’t. Here’s how things looked right before the most spectacular crash the technology industry had ever seen.\nThe crumbling of Google’s cornerstone\nSearch was Google’s only unambiguous win, as well as its primary source of revenue, so when Amazon rapidly surpassed Google as the top product search destination, Google’s foundations began to falter. As many noted at the time, the online advertising industry experienced a major shift from search to discovery in the mid-2010s.\nWhile Google protected its monopoly on the dying search advertising market, Facebook — Google’s biggest competitor in the online advertising space — got on the right side of the trend and dominated online advertising with its in-feed native display advertising."], ["author", "Hackernoon"], ["tags", "Google, collapse"], ["created_at", "2019-01-10 01:43:13.717456"], ["updated_at", "2019-01-10 01:43:13.717456"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 8], ["title", "Universities are broke. So let’s cut the pointless admin and get back to teaching\n"], ["description", "A\ns students have been celebrating their exam results, pundits from across the political spectrum have been commiserating the state of British universities. Andrew Adonis, an education minister during the Blair years, has excoriated universities for offering costly courses while jacking up the pay of their senior leaders. Nick Timothy, Theresa May’s ex-advisor, thinks UK universities are an unsustainable “Ponzi scheme”. The universities minister, Jo Johnson, has written about the need to put further pressure on seats of higher learning so students get good value for money.\nBehind the political point-scoring are more serious issues. The university sector has been growing for decades, but now that growth is going into reverse. The number of undergraduates applying to universities has fallen by 4% this year. Although close to 50% of the population goes through higher education, only about 20% of jobs require an undergraduate degree. One US study found that 46% of students showed no improvement in their cognitive skills during their time at university. In some courses, like business administration, students’ capacity to think got worse for the first few years. And after they graduated, many struggled to find full-time work while being loaded down with debt. Nearly a quarter of graduates were living with their parents or relatives.\n"], ["author", "Guardian"], ["tags", "Universities"], ["created_at", "2019-01-10 01:43:13.719858"], ["updated_at", "2019-01-10 01:43:13.719858"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 9], ["title", "New and improved bike routing, with low stress options\n"], ["description", "Bicyclists ride to commute, to exercise, for sport, for leisure. But no matter the reason, most cyclists will ride on the road at some point, and when they do, they’ll think about the safety and comfort of their route.\nShould you take a longer route to ride on a road with a dedicated cycling lane? Do you take a left turn to avoid those difficult hills? Different cyclists will make different choices, as the ideal route for one bicyclist may not be so ideal for another.\nValhalla, the open-source routing engine that powers Mapzen Turn-by-Turn, has always had customization parameters. While these include use_roads and use_hills, setting these to zero didn’t quite define what most would consider a “low stress” bike route. At least not until now!\nThis summer, I and the Mapzen routing team enhanced Valhalla’s bicycle costing system. Not only is overall routing improved, but use_roads and use_hillsare now much more versatile: when both of these parameters are set to 0, Valhalla generates a nice, “low-stress” biking route. As these parameters get closer to 1, it linearly increases to a more “professional” biking route.\nAlong with this new update, our default bike settings have also changed — use_roads and use_hills previously defaulted to 0.5, but now they default to 0.25. The default bike (and thus speed) has also been changed from a road bike to a hybrid bike, which is more suited for city riding.\nTechnical Details\nThe meat of this update is the added support for low-stress biking. Our original goal was to introduce a new “low-stress bike” costing class derived from the regular bike costing class. However, after doing this, we realized that the algorithms of the new LowStressBicycleCost class were actually cleaner and easier to manage than our original bike costing algorithms. This inspried us to rewrite the old bike code to look like the new low-stress bike code. This way, the use_roads and use_hills parameters acted as variables that scale the costs of edges (i.e. road segments) with particular attributes in a way that provides low-stress biking at one end of the spectrum, and professional road biking on the other.\nWhen originally making the LowStressBicycleCost class, we made use of research by Michael B. Lowry at the University of Idaho, Peter Furth at Northeastern, and Tracy Hadden-Loh with the Rails-to-Trails Conservancy. Their paper titled “Low-Stress Neighborhood Bikeability Assessment to Prioritize Bicycle Infrastructure” provides a way to score a road based on how stressful it is to bike on. Here are the variables that are included in the score:\n"], ["author", "Mapzen"], ["tags", "Bikes"], ["created_at", "2019-01-10 01:43:13.722234"], ["updated_at", "2019-01-10 01:43:13.722234"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 10], ["title", "D as a Better C"], ["description", "D was designed from the ground up to interface directly and easily to C, and to a lesser extent C++. This provides access to endless C libraries, the Standard C runtime library, and of course the operating system APIs, which are usually C APIs.\nBut there’s much more to C than that. There are large and immensely useful programs written in C, such as the Linux operating system and a very large chunk of the programs written for it. While D programs can interface with C libraries, the reverse isn’t true. C programs cannot interface with D ones. It’s not possible (at least not without considerable effort) to compile a couple of D files and link them in to a C program. The trouble is that compiled D files refer to things that only exist in the D runtime library, and linking that in (it’s a bit large) tends to be impractical.\nD code also can’t exist in a program unless D controls the main() function, which is how the startup code in the D runtime library is managed. Hence D libraries remain inaccessible to C programs, and chimera programs (a mix of C and D) are not practical. One cannot pragmatically “try out” D by add D modules to an existing C program.\nThat is, until Better C came along.\nIt’s been done before, it’s an old idea. Bjarne Stroustrup wrote a paper in 1988 entitled “A Better C“. His early C++ compiler was able to compile C code pretty much unchanged, and then one could start using C++ features here and there as they made sense, all without disturbing the existing investment in C. This was a brilliant strategy, and drove the early success of C++.\nA more modern example is Kotlin, which uses a different method. Kotlin syntax is not compatible with Java, but it is fully interoperable with Java, relies on the existing Java libraries, and allows a gradual migration of Java code to Kotlin. Kotlin is indeed a “Better Java”, and this shows in its success.\nD as Better C\nD takes a radically different approach to making a better C. It is not an extension of C, it is not a superset of C, and does not bring along C’s longstanding issues (such as the preprocessor, array overflows, etc.). D’s solution is to subset the D language, removing or altering features that require the D startup code and runtime library. This is, simply, the charter of the -betterC compiler switch.\nDoesn’t removing things from D make it no longer D? That’s a hard question to answer, and it’s really a matter of individual preference. The vast bulk of the core language remains. Certainly the D characteristics that are analogous to C remain. The result is a language somewhere in between C and D, but that is fully upward compatible with D.\nRemoved Things\nMost obviously, the garbage collector is removed, along with the features that depend on the garbage collector. Memory can still be allocated the same way as in C – using malloc() or some custom allocator.\nAlthough C++ classes and COM classes will still work, D polymorphic classes will not, as they rely on the garbage collector.\nExceptions, typeid, static construction/destruction, RAII, and unittests are removed. But it is possible we can find ways to add them back in.\nAsserts are altered to call the C runtime library assert fail functions rather than the D runtime library ones.\n(This isn’t a complete list, for that see http://dlang.org/dmd-windows.html#switch-betterC.)\nRetained Things\nMore importantly, what remains?\nWhat may be initially most important to C programmers is memory safety in the form of array overflow checking, no more stray pointers into expired stack frames, and guaranteed initialization of locals. This is followed by what is expected in a modern language — modules, function overloading, constructors, member functions, Unicode, nested functions, dynamic closures, Compile Time Function Execution, automated documentation generation, highly advanced metaprogramming, and Design by Introspection.\n"], ["author", "D Lang"], ["tags", "D, C, languages"], ["created_at", "2019-01-10 01:43:13.724402"], ["updated_at", "2019-01-10 01:43:13.724402"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 11], ["title", "Why I haven't jumped ship from Common Lisp to Racket (just yet)\n"], ["description", "Matthias Felleisen jested \"Why are you still using CL when Scrbl/Racket is so much better :-)\" ? My response was as follows:\nDear Matthias,\nyou are right Racket is so much better in so many dimensions. I use Lisp because I just can't bear programming in a language without proper syntactic abstraction, and that is a dimension where Racket is far ahead of Common Lisp (CL), which sadly also remains far ahead of the rest of competition. Racket also has managed to grow a remarkable way to mix typed and untyped program fragments, which sets it ahead of most. But I am under the impression that there are still many dimensions in which Racket lags behind other languages and Common Lisp (CL) in particular.\n\t1.\tThe Common Lisp Object System (CLOS) has multiple-inheritance, multi-methods, method combinations, introspection and extensibility via the MOP, generic functions that work on builtin classes, support for dynamic instance class change (change-class, update-instance-for-changed-class) and class redefinition (defclass, update-instance-for-redefined-class), a semi-decent story for combining parametric polymorphism and ad hoc polymorphism (my own lisp-interface-library), etc. Racket seems to still be playing catch-up with respect to ad hoc polymorphism, and is lacking a set of good data structure libraries that take advantage of both functional and object-oriented programming (a good target is Scala's scalaz or its rival cats).\n\t2.\tWhile the ubiquity of global side-effects in CL is very bad, the facts that all objects that matter are addressable by a path from some global namespace and that live redefinition is actively supported makes debugging and maintaining long-lived systems with in-image persistent data more doable (see again CLOS's update-instance-for-redefined-class). This is in contrast with the Racket IDE which drops live data when you recompile the code, which is fine for student exercises, but probably wrong for live systems. CL is one of the few languages that takes long-term data seriously (though not quite as seriously as Erlang).\n\t3.\tLibraries. CL seems to have much more libraries than Racket, and though the quality varies, these libraries seem to often have more feature coverage and more focus on production quality. From a cursory look, Racket libraries seem to often stop at \"good enough for demo\". An effort on curating libraries, homogenizing namespaces, etc., could also help Racket (I consider CL rather bad in this respect, yet Racket seems worse). My recent experience with acmart, my first maintained Racket library, makes me think that writing libraries is even higher overhead in Racket than in CL, which is already mediocre.\n\t4.\tSpeedwise, SBCL still produces code that runs noticeably faster than Racket (as long as you don't need full delimited control, which would requires a much slower CL-to-CL compiler like hu.dwim.delico). This difference may be reduced as Racket adopts the notoriously fast Chez Scheme as a backend (or not). Actually, the announcement of the new Racket backend really makes me eager to jump ship.\n\t5.\tAs for startup latency, Common Lisp is also pretty good with its saved images (they start in tens of milliseconds on my laptop), making it practical to write trivial utilities for interactive use from the shell command-line with an \"instantaneous\" feel. Racket takes hundreds of milliseconds at startup which puts it (barely) in the \"noticeable delay\" category (though nowhere near as bad as anything JVM-based).\nAll these reasons, in addition to inertia (and a non-negligible code-base and mind-base), have made me stick to CL — for now. I think Racket is the future of Lisp (at least for me), I just haven't jumped ship right yet. If and when I do, I'll probably be working on some of these issues.\nPS (still 2017-03): Here are ways that Racket is indeed vastly superior to CL, that make me believe it's the future of Lisp:\n\t•\tFirst and foremost, Racket keeps evolving, and not just \"above\" the base language, but importantly below. This alone makes it vastly superior to CL (that has evolved tremendously \"above\" its base abstractions, but hasn't evolved \"below\", except for FFI purpose, in the last 20 years), which itself remains superior to most languages (that tend to not evolve much \"above\", and not at all \"below\" their base abstractions).\n\t•\tRacket is by far ahead of the pack in terms of Syntactic abstraction. It is the best language in which to define other languages and experiment with them, bar none.\n\t•\tRacket has a decent module system, including build and phase separation (even separate phases for testing, cross-compilation or whatever you want), and symbol selection and renaming.\n\t•\tRacket has typed modules, and a good interface between typed and untyped modules. While types in Racket do not compete with those of say Haskell, just yet, they are still evolving, fast, and that contract interface between typed and untyped is far ahead of anything the competition has.\n\t•\tRacket has lots of great teaching material.\n\t•\tRacket has a one-stop-shop for documentation, though it isn't always easy to navigate and often lack examples. That still puts it far ahead of CL and a lot of languages.\n\t•\tRacket provides purity by default a decent set of data structures.\n\t•\tRacket has many primitives for concurrency, virtualization, sandboxing.\n\t•\tRacket has standard primitives for laziness, pattern-matching, etc.\n\t•\tRacket has a standard, portable, gui.\n\t•\tRacket has a lively, healthy, user and developer community.\n"], ["author", "Live Journal"], ["tags", "Lisp, Racket"], ["created_at", "2019-01-10 01:43:13.726733"], ["updated_at", "2019-01-10 01:43:13.726733"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 12], ["title", "Exxon Duped Public Over Climate Concerns, Harvard Research Says\n"], ["description", "Exxon Mobil Corp. spent the last 40 years undermining public concern over climate change, even as its own scientists determined man-made global warming was real and a serious threat, according to Harvard University researchers writing in a peer-reviewed journal.\n“Exxon Mobil contributed to advancing climate science -- by way of its scientists’ academic publications -- but promoted doubt about it in advertorials,” the Harvard researchers wrote in the journal Environmental Research Letters. “Given this discrepancy, we conclude that Exxon Mobil misled the public.”\nThe findings could add fuel to lawsuits brought against the world’s largest oil explorer by market value. New York’s attorney general is probing whether Exxon lied to investors and the public for almost four decades about the impact of climate change on profits. Exxon is one of the world’s largest sources of fuels responsible for climate change, producing 10 million gallons of gasoline and other fuels every hour of every day.\nThe researchers said Exxon has disagreed with their conclusion and said its statements on public policy and climate science “have always reflected the global understanding of the issue,” according to an opinion piece written by two of the authors and published Wednesday in the New York Times.\nExxon said it acknowledges climate change is a risk that requires action, and it dismissed the conclusions of the study, saying the researchers are looking for money.\n“The study was paid for, written and published by activists leading a five-year campaign against the company,” Exxon said in an emailed statement. “It is inaccurate and preposterous. Rather than pursuing solutions to address the risk of climate change, these activists, along with trial lawyers, have acknowledged a goal of extracting money from our shareholders and attacking the company’s reputation.”\nStranded Assets\nThe study’s authors, Geoffrey Supran and Naomi Oreskes, both scholars of scientific history at Harvard in Cambridge, Massachusetts, reviewed 187 climate change communications issued by Exxon between 1977 and 2014. Their article, “Assessing Exxon Mobil’s climate change communications,” was published Wednesday.\nWhile 83 percent of Exxon’s peer-reviewed scientific papers and 80 percent of its internal documents acknowledge climate change is real and human-caused, 81 percent of its advertorials expressed doubt over the issue, according to the research. Internal documents accepted the risk of stranded assets caused by climate change, while the advertorials did not.\n"], ["author", "Bloomberg"], ["tags", "Exxon"], ["created_at", "2019-01-10 01:43:13.729013"], ["updated_at", "2019-01-10 01:43:13.729013"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 13], ["title", "Mathematicians Tame Rogue Waves, Illuminating Future of LED Lighting\n"], ["description", "In the 1950s, Philip Anderson, a physicist at Bell Laboratories, discovered a strange phenomenon. In some situations where it seems as though waves should advance freely, they just stop — like a tsunami halting in the middle of the ocean.\nAnderson won the 1977 Nobel Prize in physics for his discovery of what is now called Anderson localization, a term that refers to waves that stay in some “local” region rather than propagating the way you’d expect. He studied the phenomenon in the context of electrons moving through impure materials (electrons behave as both particles and waves), but under certain circumstances it can happen with other types of waves as well.\nEven after Anderson’s discovery, much about localization remained mysterious. Although researchers were able to prove that localization does indeed occur, they had a very limited ability to predict when and where it might happen. It was as if you were standing on one side of a room, expecting a sound wave to reach your ear, but it never did. Even if, after Anderson, you knew that the reason it didn’t was that it had localized somewhere on its way, you’d still like to figure out exactly where it had gone. And for decades, that’s what mathematicians and physicists struggled to explain.\nThis is where Svitlana Mayboroda comes in. Mayboroda, 36, is a mathematician at the University of Minnesota. Five years ago, she began to untangle the long-standing puzzle of localization. She came up with a mathematical formula called the “landscape function” that predicts exactly where waves will localize and what form they’ll take when they do.\n“You want to know how to find these areas of localization,” Mayboroda said. “The naive approach is difficult. The landscape function magically gives a way of doing it.”\nHer work began in the realm of pure mathematics, but unlike most mathematical advances, which might find a practical use after decades, if ever, her work is already being applied by physicists. In particular, LED lights — or light-emitting diodes — depend on the phenomenon of localization. They light up when electrons in a semiconducting material, having started out in a position of higher energy, get trapped (or “localize”) in a position of lower energy and emit the difference as a photon of light. LEDs are still a work in progress: Engineers need to build LEDs that more efficiently convert electrons into light, if the devices are to become the future of artificial lighting, as many expect they will. If physicists can gain a better understanding of the mathematics of localization, engineers can build better LEDs — and with the help of Mayboroda’s mathematics, that effort is already under way.\nRogue Waves\nLocalization is not an intuitive concept. Imagine you stood on one side of a room and watched someone ring a bell, only the sound never reached your ears. Now imagine that the reason it didn’t is that the sound had fallen into an architectural trap, like the sound of the sea bottled in a shell.\n"], ["author", "Quanta Magazine"], ["tags", "Mathematicians, LED"], ["created_at", "2019-01-10 01:43:13.731202"], ["updated_at", "2019-01-10 01:43:13.731202"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 14], ["title", "Write a hash table in C\n"], ["description", "Hash tables are one of the most useful data structures. Their quick and scalable insert, search and delete make them relevant to a large number of computer science problems.\nIn this tutorial, we implement an open-addressed, double-hashed hash table in C. By working through this tutorial, you will gain:\n\t•\tUnderstanding of how a fundamental data structure works under the hood\n\t•\tDeeper knowledge of when to use hash tables, when not to use them, and how they can fail\n\t•\tExposure to new C code\nC is a great language to write a hash table in because:\n\t•\tThe language doesn't come with one included\n\t•\tIt is a low-level language, so you get deeper exposure to how things work at a machine level\nThis tutorial assumes some familiarity with programming and C syntax. The code itself is relatively straightforward, and most issues should be solvable with a web search. If you run into further problems, please open a GitHub Issue.\nThe full implementation is around 200 lines of code, and should take around an hour or two to work through.\n\n"], ["author", "Github"], ["tags", "Hash tables, C"], ["created_at", "2019-01-10 01:43:13.733222"], ["updated_at", "2019-01-10 01:43:13.733222"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 15], ["title", "Google unveils a new, cheaper networking option for cloud customers: the public internet\n"], ["description", "Google Cloud Platform customers will have a new option when selecting the type of network used to deliver their traffic to their users: they can keep using Google’s network, or they can save some money with the new option of using public transit networks.\nGoogle has long argued that one of the best reasons to use its public cloud service is the strength of its fiber network, developed and enhanced for more than a decade to support the global data centers powering its search engine. But there are some applications that don’t require that level of performance, and so Google is now offering a cheaper networking service that uses the transit networks that deliver the bulk of traffic to internet service providers, said Prajakta Joshi, product manager for cloud networking at Google.\nThe new “Standard Tier” should offer performance comparable to what customers would experience through “other cloud providers,” Joshi said, although both Amazon Web Services and Microsoft Azure operate fiber networks outside of the public internet. A basic networking 101 reminder: most internet traffic passes through a number of different intersections from its source on the way to its destination, but Google’s “Premium Tier” network was built outside that system to support its global search ambitions by reducing the number of “hops” data is forced to take along the way.\n"], ["author", "Geek Wire"], ["tags", "Google"], ["created_at", "2019-01-10 01:43:13.735172"], ["updated_at", "2019-01-10 01:43:13.735172"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/import.rake:11
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-01-10 01:43:13.737389"], ["updated_at", "2019-01-10 01:43:13.737389"]]
+  ↳ lib/tasks/import.rake:11
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/tasks/import.rake:11
+Started GET "/" for 127.0.0.1 at 2019-01-10 20:12:13 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-10 20:12:16 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (1.3ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 21:00:35 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/articles"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 21:33:24 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/jrod/Desktop/backendapi/app/controllers/api/v1/articles_controller.rb:1: class/module name must be CONSTANT
+module api
+          ^
+/home/jrod/Desktop/backendapi/app/controllers/api/v1/articles_controller.rb:2: class/module name must be CONSTANT
+  module v1
+           ^):
+  
+app/controllers/api/v1/articles_controller.rb:1: class/module name must be CONSTANT
+app/controllers/api/v1/articles_controller.rb:2: class/module name must be CONSTANT
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 21:33:46 -0500
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7458718230852022680)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 1], ["title", "Brazil opens vast Amazon reserve to mining"], ["description", "Brazil's government has abolished a vast national reserve in the Amazon to open up the area to mining.\nThe area, covering 46,000 sq km (17,800 sq miles), straddles the northern states of Amapa and Para, and is thought to be rich in gold, and other minerals.\nThe government said nine conservation and indigenous land areas within it would continue to be legally protected.\nBut activists have voiced concern that these areas could be badly compromised.\nA decree from President Michel Temer abolished a protected area known as the National Reserve of Copper and Associates (Renca).\nIts size is larger than Denmark and about 30% of it will be open to mining.\nThe mining and energy ministry says protected forest areas and indigenous reserves will not be affected.\n\"The objective of the measure is to attract new investments, generating wealth for the country and employment and income for society, always based on the precepts of sustainability,\" the ministry said in a statement.\n"], ["author", "BBC"], ["tags", "Brazil, amazon"], ["created_at", "2016-12-04 00:00:00"], ["updated_at", "2017-12-04 00:00:00"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 2], ["title", "Google will ask: 'Are you depressed?'"], ["description", "People searching for “depression” on Google will soon be prompted to take a questionnaire to assess if they may be suffering from the illness.\nThe search giant has partnered with the US National Alliance on Mental Illness (Nami) to roll out the project which is currently only for US users.\nUsers searching for depression will be prompted to “check if you’re clinically depressed”.\n“While this tool can help, it’s important to note that PHQ-9 is not meant to act as a singular tool for diagnosis,” Nami said.\nIn a blog post announcing the news, Nami said the test should not be seen as replacing the insight of qualified mental health professionals - was instead a method to help people get the right help more quickly.\n\"By tapping “Check if you’re clinically depressed,” you can take this private self-assessment to help determine your level of depression and the need for an in-person evaluation,” the organisation explained.\n\"The results of the PHQ-9 can help you have a more informed conversation with your doctor.\"\n'Trouble concentrating?'\nThe question will appear in the Knowledge Panel - the box that appears at the top of results when users search on a mobile device. Typically this panel is used for factual information, including details drawn from Wikipedia entries.\nThe Patient Health Questionnaire-9 is a series of nine questions about the subject’s mental health.\nIt asks how often you feel you have “little interest or pleasure in doing things” or “trouble concentrating on things, such as reading the newspaper or watching television?”.\nVarious studies have concluded it is a concise, reliable way to accurately detect signs of clinical depression.\nSpeaking to the Financial Times, Google product manager Vidushi Tekriwal said users who fill out the test will not have their answers logged by the company, nor would advertising be targeted to them as a result.\nHowever, one psychotherapist said the idea seemed \"terribly redundant\".\nSomeone googling depression will probably not find more useful information via a short diagnostic than they have already surfaced in search results, argued Dr Aaron Balick, author of \"The Psychodynamics of Social Netowrking\".\n\"A better approach would be some sort of acknowledgment that the searcher may be feeling down, and offering them resources and a direct line - perhaps a chat box - to local psychological services,\" he told the BBC.\n"], ["author", "Dave Lee"], ["tags", "Google, depression"], ["created_at", "2019-01-11 04:12:09.377698"], ["updated_at", "2019-01-11 04:12:09.377698"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 3], ["title", "Wayne Rooney international retirement: How will history judge his England career?"], ["description", "Wayne Rooney's retirement from international duty - announced after England's all-time record goalscorer had been told he had won a recall at 31 - closes another chapter in his illustrious story.\nRooney, with 53 England goals in 119 appearances, left Manchester United to return to Everton this summer with his place in Old Trafford's history books also assured after he overtook Sir Bobby Charlton's club record with 253 goals.\nHe had been sidelined by Jose Mourinho at United, and also by Southgate with England, but such has been his early rejuvenation at Goodison Park that he was offered a place back in the fold for the forthcoming World Cup qualifiers against Malta and Slovakia.\nRooney, who originally planned to end his England career after next summer's World Cup in Russia, decided against a return and will now focus fully on Everton.\nSo how will history judge Wayne Rooney's England career?\n"], ["author", "BBC Sport"], ["tags", "Rooney, England, Soccer"], ["created_at", "2012-12-04 00:00:00"], ["updated_at", "2019-01-11 04:12:09.382542"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 4], ["title", "US Open: Milos Raonic withdraws because of wrist injury"], ["description", "World number 11 Milos Raonic is the latest high-profile player to pull out of the US Open, which starts on Monday.\nCanadian Raonic, 26, has withdrawn because of a persistent wrist injury but said that he planned to return to action before the end of 2017.\nDefending champion Stan Wawrinka is unable to defend his singles title at Flushing Meadows because of a knee injury.\nNovak Djokovic (elbow) and Victoria Azarenka will also be absent.\nBelarusian Azarenka, 28, is missing the final Grand Slam of the year because of an \"ongoing family situation\".\nWorld number 10 Kei Nishikori is also out after tearing a tendon in his right wrist.\nRaonic said he was unable give \"full effort\" as a result of his injury.\n\"I have too much respect for the US Open and my fellow competitors to take a spot in the draw when I know I cannot give full effort due to this injury,\" he said.\n"], ["author", "BBB Sports"], ["tags", "US Open, Tennis, Raonic"], ["created_at", "2015-02-03 00:00:00"], ["updated_at", "2015-05-03 00:00:00"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 5], ["title", "Billionaires and big ag are joining venture investors to fund lab-grown meat\n"], ["description", "Eighty-five years ago, Winston Churchill wrote an article for Popular Mechanics that predicted humans would soon be growing their meat rather than cultivating animals for it.\nNow, with $17 million in fresh financing from a slew of new investors, including the billionaires Bill Gates and Richard Branson, the big agriculture company Cargill and the venture capital firm DFJ, Memphis Meats is hoping to create an entirely new industry around what it calls “clean meat.”\n“Instead of using animals as pieces of technology to convert plants into proteins to make things that we like to eat, drink and wear, we can just use biology to make those things directly,” said Seth Bannon, a co-founder of the upstart venture firm Fifty Years and an early investor in Memphis Meats.\nThe company has already successfully made synthesized beef, chicken and duck, according to Memphis Meats co-founder and chief executive Uma Valeti. Now the trick is to get the company to grow their meat at scale.\n“We envision this to be a production facility where people can walk through and see where the meat is growing, where it is being harvested and where it is being cooked. You don’t get to visit feed lots or visit slaughterhouses,” Valeti tells me.\nValeti imagines a production facility that looks more like a craft brewery than a slaughterhouse. It also would represent the first major innovation in the meat industry in the 10,000 years since humans first began breeding livestock.\nIn a 2002 article for The New York Times Magazine, journalist Michael Pollan described how cows are slaughtered. \nThe cows are funneled into a chute single-file. Once there, they are walked over a metal bar, and, as the floor declines, the cows are suspended over a false floor on the bar and then taken on a conveyor belt to pass in front of a slaughterhouse employee called a “stunner.”\nThe stunner’s job is to shoot a seven-inch steel bolt, roughly the width of a pencil, between the eyes of the drugged and incapacitated cow.\nThen the dead animal is moved from the conveyor belt to a trolley overhead and carried to the bleeding area, where its throat is cut. Roughly 392 cows are slaughtered per hour at a typical slaughterhouse (like the one in Kansas that Pollan described).\nThis is the culmination of human achievement in meat processing so far (don’t even get me started on chickens).\n"], ["author", "TechCrunch"], ["tags", "Billionaires, Ventures"], ["created_at", "2012-07-08 00:00:00"], ["updated_at", "2013-07-08 00:00:00"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 6], ["title", "Thanks to Amazon, Seattle is now America’s biggest company town\n"], ["description", "Amazon’s extraordinary growth has turned Seattle into the biggest company town in America.\nAmazon now occupies a mind-boggling 19 percent of all prime office space in the city, the most for any employer in a major U.S. city, according to a new analysis conducted for The Seattle Times.\n\nAmazon’s footprint in Seattle is more than twice as large as any other company in any other big U.S. city, and the e-commerce giant’s expansion here is just getting started.\n\nThe swarms of 20-somethings crowding into South Lake Union every morning represent an urban campus that is unparalleled in the United States — and they have helped transform Seattle, for better or worse. Amazon’s rapid rise has fueled an economy that has driven up wages and lowered unemployment, but also produced gridlock on the roads and sky-high housing prices.\nAnd while Seattle’s booming economy is often attributed to a wide variety of factors, increasingly, it’s all about one company.\nAmazon now occupies more office space than the next 40 biggest employers in the city combined.\nAnd that’s only the beginning: Amazon’s Seattle footprint of 8.1 million square feet is expected to soar to more than 12 million square feet within five years.\n"], ["author", "Amazon"], ["tags", "Amazon, Seattle"], ["created_at", "2011-06-03 00:00:00"], ["updated_at", "2016-09-03 00:00:00"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 7], ["title", "This is How Google will Collapse"], ["description", "Google made almost all its money from ads. It was a booming business — until it wasn’t. Here’s how things looked right before the most spectacular crash the technology industry had ever seen.\nThe crumbling of Google’s cornerstone\nSearch was Google’s only unambiguous win, as well as its primary source of revenue, so when Amazon rapidly surpassed Google as the top product search destination, Google’s foundations began to falter. As many noted at the time, the online advertising industry experienced a major shift from search to discovery in the mid-2010s.\nWhile Google protected its monopoly on the dying search advertising market, Facebook — Google’s biggest competitor in the online advertising space — got on the right side of the trend and dominated online advertising with its in-feed native display advertising."], ["author", "Hackernoon"], ["tags", "Google, collapse"], ["created_at", "2012-02-07 00:00:00"], ["updated_at", "2014-08-06 00:00:00"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 8], ["title", "Universities are broke. So let’s cut the pointless admin and get back to teaching\n"], ["description", "A\ns students have been celebrating their exam results, pundits from across the political spectrum have been commiserating the state of British universities. Andrew Adonis, an education minister during the Blair years, has excoriated universities for offering costly courses while jacking up the pay of their senior leaders. Nick Timothy, Theresa May’s ex-advisor, thinks UK universities are an unsustainable “Ponzi scheme”. The universities minister, Jo Johnson, has written about the need to put further pressure on seats of higher learning so students get good value for money.\nBehind the political point-scoring are more serious issues. The university sector has been growing for decades, but now that growth is going into reverse. The number of undergraduates applying to universities has fallen by 4% this year. Although close to 50% of the population goes through higher education, only about 20% of jobs require an undergraduate degree. One US study found that 46% of students showed no improvement in their cognitive skills during their time at university. In some courses, like business administration, students’ capacity to think got worse for the first few years. And after they graduated, many struggled to find full-time work while being loaded down with debt. Nearly a quarter of graduates were living with their parents or relatives.\n"], ["author", "Guardian"], ["tags", "Universities"], ["created_at", "2015-12-05 00:00:00"], ["updated_at", "2019-01-11 04:12:09.404406"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 9], ["title", "New and improved bike routing, with low stress options\n"], ["description", "Bicyclists ride to commute, to exercise, for sport, for leisure. But no matter the reason, most cyclists will ride on the road at some point, and when they do, they’ll think about the safety and comfort of their route.\nShould you take a longer route to ride on a road with a dedicated cycling lane? Do you take a left turn to avoid those difficult hills? Different cyclists will make different choices, as the ideal route for one bicyclist may not be so ideal for another.\nValhalla, the open-source routing engine that powers Mapzen Turn-by-Turn, has always had customization parameters. While these include use_roads and use_hills, setting these to zero didn’t quite define what most would consider a “low stress” bike route. At least not until now!\nThis summer, I and the Mapzen routing team enhanced Valhalla’s bicycle costing system. Not only is overall routing improved, but use_roads and use_hillsare now much more versatile: when both of these parameters are set to 0, Valhalla generates a nice, “low-stress” biking route. As these parameters get closer to 1, it linearly increases to a more “professional” biking route.\nAlong with this new update, our default bike settings have also changed — use_roads and use_hills previously defaulted to 0.5, but now they default to 0.25. The default bike (and thus speed) has also been changed from a road bike to a hybrid bike, which is more suited for city riding.\nTechnical Details\nThe meat of this update is the added support for low-stress biking. Our original goal was to introduce a new “low-stress bike” costing class derived from the regular bike costing class. However, after doing this, we realized that the algorithms of the new LowStressBicycleCost class were actually cleaner and easier to manage than our original bike costing algorithms. This inspried us to rewrite the old bike code to look like the new low-stress bike code. This way, the use_roads and use_hills parameters acted as variables that scale the costs of edges (i.e. road segments) with particular attributes in a way that provides low-stress biking at one end of the spectrum, and professional road biking on the other.\nWhen originally making the LowStressBicycleCost class, we made use of research by Michael B. Lowry at the University of Idaho, Peter Furth at Northeastern, and Tracy Hadden-Loh with the Rails-to-Trails Conservancy. Their paper titled “Low-Stress Neighborhood Bikeability Assessment to Prioritize Bicycle Infrastructure” provides a way to score a road based on how stressful it is to bike on. Here are the variables that are included in the score:\n"], ["author", "Mapzen"], ["tags", "Bikes"], ["created_at", "2015-12-05 00:00:00"], ["updated_at", "2016-12-12 00:00:00"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 10], ["title", "D as a Better C"], ["description", "D was designed from the ground up to interface directly and easily to C, and to a lesser extent C++. This provides access to endless C libraries, the Standard C runtime library, and of course the operating system APIs, which are usually C APIs.\nBut there’s much more to C than that. There are large and immensely useful programs written in C, such as the Linux operating system and a very large chunk of the programs written for it. While D programs can interface with C libraries, the reverse isn’t true. C programs cannot interface with D ones. It’s not possible (at least not without considerable effort) to compile a couple of D files and link them in to a C program. The trouble is that compiled D files refer to things that only exist in the D runtime library, and linking that in (it’s a bit large) tends to be impractical.\nD code also can’t exist in a program unless D controls the main() function, which is how the startup code in the D runtime library is managed. Hence D libraries remain inaccessible to C programs, and chimera programs (a mix of C and D) are not practical. One cannot pragmatically “try out” D by add D modules to an existing C program.\nThat is, until Better C came along.\nIt’s been done before, it’s an old idea. Bjarne Stroustrup wrote a paper in 1988 entitled “A Better C“. His early C++ compiler was able to compile C code pretty much unchanged, and then one could start using C++ features here and there as they made sense, all without disturbing the existing investment in C. This was a brilliant strategy, and drove the early success of C++.\nA more modern example is Kotlin, which uses a different method. Kotlin syntax is not compatible with Java, but it is fully interoperable with Java, relies on the existing Java libraries, and allows a gradual migration of Java code to Kotlin. Kotlin is indeed a “Better Java”, and this shows in its success.\nD as Better C\nD takes a radically different approach to making a better C. It is not an extension of C, it is not a superset of C, and does not bring along C’s longstanding issues (such as the preprocessor, array overflows, etc.). D’s solution is to subset the D language, removing or altering features that require the D startup code and runtime library. This is, simply, the charter of the -betterC compiler switch.\nDoesn’t removing things from D make it no longer D? That’s a hard question to answer, and it’s really a matter of individual preference. The vast bulk of the core language remains. Certainly the D characteristics that are analogous to C remain. The result is a language somewhere in between C and D, but that is fully upward compatible with D.\nRemoved Things\nMost obviously, the garbage collector is removed, along with the features that depend on the garbage collector. Memory can still be allocated the same way as in C – using malloc() or some custom allocator.\nAlthough C++ classes and COM classes will still work, D polymorphic classes will not, as they rely on the garbage collector.\nExceptions, typeid, static construction/destruction, RAII, and unittests are removed. But it is possible we can find ways to add them back in.\nAsserts are altered to call the C runtime library assert fail functions rather than the D runtime library ones.\n(This isn’t a complete list, for that see http://dlang.org/dmd-windows.html#switch-betterC.)\nRetained Things\nMore importantly, what remains?\nWhat may be initially most important to C programmers is memory safety in the form of array overflow checking, no more stray pointers into expired stack frames, and guaranteed initialization of locals. This is followed by what is expected in a modern language — modules, function overloading, constructors, member functions, Unicode, nested functions, dynamic closures, Compile Time Function Execution, automated documentation generation, highly advanced metaprogramming, and Design by Introspection.\n"], ["author", "D Lang"], ["tags", "D, C, languages"], ["created_at", "2010-10-10 00:00:00"], ["updated_at", "2011-11-11 00:00:00"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (1.0ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 11], ["title", "Why I haven't jumped ship from Common Lisp to Racket (just yet)\n"], ["description", "Matthias Felleisen jested \"Why are you still using CL when Scrbl/Racket is so much better :-)\" ? My response was as follows:\nDear Matthias,\nyou are right Racket is so much better in so many dimensions. I use Lisp because I just can't bear programming in a language without proper syntactic abstraction, and that is a dimension where Racket is far ahead of Common Lisp (CL), which sadly also remains far ahead of the rest of competition. Racket also has managed to grow a remarkable way to mix typed and untyped program fragments, which sets it ahead of most. But I am under the impression that there are still many dimensions in which Racket lags behind other languages and Common Lisp (CL) in particular.\n\t1.\tThe Common Lisp Object System (CLOS) has multiple-inheritance, multi-methods, method combinations, introspection and extensibility via the MOP, generic functions that work on builtin classes, support for dynamic instance class change (change-class, update-instance-for-changed-class) and class redefinition (defclass, update-instance-for-redefined-class), a semi-decent story for combining parametric polymorphism and ad hoc polymorphism (my own lisp-interface-library), etc. Racket seems to still be playing catch-up with respect to ad hoc polymorphism, and is lacking a set of good data structure libraries that take advantage of both functional and object-oriented programming (a good target is Scala's scalaz or its rival cats).\n\t2.\tWhile the ubiquity of global side-effects in CL is very bad, the facts that all objects that matter are addressable by a path from some global namespace and that live redefinition is actively supported makes debugging and maintaining long-lived systems with in-image persistent data more doable (see again CLOS's update-instance-for-redefined-class). This is in contrast with the Racket IDE which drops live data when you recompile the code, which is fine for student exercises, but probably wrong for live systems. CL is one of the few languages that takes long-term data seriously (though not quite as seriously as Erlang).\n\t3.\tLibraries. CL seems to have much more libraries than Racket, and though the quality varies, these libraries seem to often have more feature coverage and more focus on production quality. From a cursory look, Racket libraries seem to often stop at \"good enough for demo\". An effort on curating libraries, homogenizing namespaces, etc., could also help Racket (I consider CL rather bad in this respect, yet Racket seems worse). My recent experience with acmart, my first maintained Racket library, makes me think that writing libraries is even higher overhead in Racket than in CL, which is already mediocre.\n\t4.\tSpeedwise, SBCL still produces code that runs noticeably faster than Racket (as long as you don't need full delimited control, which would requires a much slower CL-to-CL compiler like hu.dwim.delico). This difference may be reduced as Racket adopts the notoriously fast Chez Scheme as a backend (or not). Actually, the announcement of the new Racket backend really makes me eager to jump ship.\n\t5.\tAs for startup latency, Common Lisp is also pretty good with its saved images (they start in tens of milliseconds on my laptop), making it practical to write trivial utilities for interactive use from the shell command-line with an \"instantaneous\" feel. Racket takes hundreds of milliseconds at startup which puts it (barely) in the \"noticeable delay\" category (though nowhere near as bad as anything JVM-based).\nAll these reasons, in addition to inertia (and a non-negligible code-base and mind-base), have made me stick to CL — for now. I think Racket is the future of Lisp (at least for me), I just haven't jumped ship right yet. If and when I do, I'll probably be working on some of these issues.\nPS (still 2017-03): Here are ways that Racket is indeed vastly superior to CL, that make me believe it's the future of Lisp:\n\t•\tFirst and foremost, Racket keeps evolving, and not just \"above\" the base language, but importantly below. This alone makes it vastly superior to CL (that has evolved tremendously \"above\" its base abstractions, but hasn't evolved \"below\", except for FFI purpose, in the last 20 years), which itself remains superior to most languages (that tend to not evolve much \"above\", and not at all \"below\" their base abstractions).\n\t•\tRacket is by far ahead of the pack in terms of Syntactic abstraction. It is the best language in which to define other languages and experiment with them, bar none.\n\t•\tRacket has a decent module system, including build and phase separation (even separate phases for testing, cross-compilation or whatever you want), and symbol selection and renaming.\n\t•\tRacket has typed modules, and a good interface between typed and untyped modules. While types in Racket do not compete with those of say Haskell, just yet, they are still evolving, fast, and that contract interface between typed and untyped is far ahead of anything the competition has.\n\t•\tRacket has lots of great teaching material.\n\t•\tRacket has a one-stop-shop for documentation, though it isn't always easy to navigate and often lack examples. That still puts it far ahead of CL and a lot of languages.\n\t•\tRacket provides purity by default a decent set of data structures.\n\t•\tRacket has many primitives for concurrency, virtualization, sandboxing.\n\t•\tRacket has standard primitives for laziness, pattern-matching, etc.\n\t•\tRacket has a standard, portable, gui.\n\t•\tRacket has a lively, healthy, user and developer community.\n"], ["author", "Live Journal"], ["tags", "Lisp, Racket"], ["created_at", "2019-01-11 04:12:09.421568"], ["updated_at", "2019-01-11 04:12:09.421568"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 12], ["title", "Exxon Duped Public Over Climate Concerns, Harvard Research Says\n"], ["description", "Exxon Mobil Corp. spent the last 40 years undermining public concern over climate change, even as its own scientists determined man-made global warming was real and a serious threat, according to Harvard University researchers writing in a peer-reviewed journal.\n“Exxon Mobil contributed to advancing climate science -- by way of its scientists’ academic publications -- but promoted doubt about it in advertorials,” the Harvard researchers wrote in the journal Environmental Research Letters. “Given this discrepancy, we conclude that Exxon Mobil misled the public.”\nThe findings could add fuel to lawsuits brought against the world’s largest oil explorer by market value. New York’s attorney general is probing whether Exxon lied to investors and the public for almost four decades about the impact of climate change on profits. Exxon is one of the world’s largest sources of fuels responsible for climate change, producing 10 million gallons of gasoline and other fuels every hour of every day.\nThe researchers said Exxon has disagreed with their conclusion and said its statements on public policy and climate science “have always reflected the global understanding of the issue,” according to an opinion piece written by two of the authors and published Wednesday in the New York Times.\nExxon said it acknowledges climate change is a risk that requires action, and it dismissed the conclusions of the study, saying the researchers are looking for money.\n“The study was paid for, written and published by activists leading a five-year campaign against the company,” Exxon said in an emailed statement. “It is inaccurate and preposterous. Rather than pursuing solutions to address the risk of climate change, these activists, along with trial lawyers, have acknowledged a goal of extracting money from our shareholders and attacking the company’s reputation.”\nStranded Assets\nThe study’s authors, Geoffrey Supran and Naomi Oreskes, both scholars of scientific history at Harvard in Cambridge, Massachusetts, reviewed 187 climate change communications issued by Exxon between 1977 and 2014. Their article, “Assessing Exxon Mobil’s climate change communications,” was published Wednesday.\nWhile 83 percent of Exxon’s peer-reviewed scientific papers and 80 percent of its internal documents acknowledge climate change is real and human-caused, 81 percent of its advertorials expressed doubt over the issue, according to the research. Internal documents accepted the risk of stranded assets caused by climate change, while the advertorials did not.\n"], ["author", "Bloomberg"], ["tags", "Exxon"], ["created_at", "0003-03-13 00:00:00"], ["updated_at", "0004-04-14 00:00:00"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 13], ["title", "Mathematicians Tame Rogue Waves, Illuminating Future of LED Lighting\n"], ["description", "In the 1950s, Philip Anderson, a physicist at Bell Laboratories, discovered a strange phenomenon. In some situations where it seems as though waves should advance freely, they just stop — like a tsunami halting in the middle of the ocean.\nAnderson won the 1977 Nobel Prize in physics for his discovery of what is now called Anderson localization, a term that refers to waves that stay in some “local” region rather than propagating the way you’d expect. He studied the phenomenon in the context of electrons moving through impure materials (electrons behave as both particles and waves), but under certain circumstances it can happen with other types of waves as well.\nEven after Anderson’s discovery, much about localization remained mysterious. Although researchers were able to prove that localization does indeed occur, they had a very limited ability to predict when and where it might happen. It was as if you were standing on one side of a room, expecting a sound wave to reach your ear, but it never did. Even if, after Anderson, you knew that the reason it didn’t was that it had localized somewhere on its way, you’d still like to figure out exactly where it had gone. And for decades, that’s what mathematicians and physicists struggled to explain.\nThis is where Svitlana Mayboroda comes in. Mayboroda, 36, is a mathematician at the University of Minnesota. Five years ago, she began to untangle the long-standing puzzle of localization. She came up with a mathematical formula called the “landscape function” that predicts exactly where waves will localize and what form they’ll take when they do.\n“You want to know how to find these areas of localization,” Mayboroda said. “The naive approach is difficult. The landscape function magically gives a way of doing it.”\nHer work began in the realm of pure mathematics, but unlike most mathematical advances, which might find a practical use after decades, if ever, her work is already being applied by physicists. In particular, LED lights — or light-emitting diodes — depend on the phenomenon of localization. They light up when electrons in a semiconducting material, having started out in a position of higher energy, get trapped (or “localize”) in a position of lower energy and emit the difference as a photon of light. LEDs are still a work in progress: Engineers need to build LEDs that more efficiently convert electrons into light, if the devices are to become the future of artificial lighting, as many expect they will. If physicists can gain a better understanding of the mathematics of localization, engineers can build better LEDs — and with the help of Mayboroda’s mathematics, that effort is already under way.\nRogue Waves\nLocalization is not an intuitive concept. Imagine you stood on one side of a room and watched someone ring a bell, only the sound never reached your ears. Now imagine that the reason it didn’t is that the sound had fallen into an architectural trap, like the sound of the sea bottled in a shell.\n"], ["author", "Quanta Magazine"], ["tags", "Mathematicians, LED"], ["created_at", "0012-03-13 00:00:00"], ["updated_at", "0011-02-14 00:00:00"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 14], ["title", "Write a hash table in C\n"], ["description", "Hash tables are one of the most useful data structures. Their quick and scalable insert, search and delete make them relevant to a large number of computer science problems.\nIn this tutorial, we implement an open-addressed, double-hashed hash table in C. By working through this tutorial, you will gain:\n\t•\tUnderstanding of how a fundamental data structure works under the hood\n\t•\tDeeper knowledge of when to use hash tables, when not to use them, and how they can fail\n\t•\tExposure to new C code\nC is a great language to write a hash table in because:\n\t•\tThe language doesn't come with one included\n\t•\tIt is a low-level language, so you get deeper exposure to how things work at a machine level\nThis tutorial assumes some familiarity with programming and C syntax. The code itself is relatively straightforward, and most issues should be solvable with a web search. If you run into further problems, please open a GitHub Issue.\nThe full implementation is around 200 lines of code, and should take around an hour or two to work through.\n\n"], ["author", "Github"], ["tags", "Hash tables, C"], ["created_at", "0012-12-12 00:00:00"], ["updated_at", "0011-11-15 00:00:00"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("id", "title", "description", "author", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["id", 15], ["title", "Google unveils a new, cheaper networking option for cloud customers: the public internet\n"], ["description", "Google Cloud Platform customers will have a new option when selecting the type of network used to deliver their traffic to their users: they can keep using Google’s network, or they can save some money with the new option of using public transit networks.\nGoogle has long argued that one of the best reasons to use its public cloud service is the strength of its fiber network, developed and enhanced for more than a decade to support the global data centers powering its search engine. But there are some applications that don’t require that level of performance, and so Google is now offering a cheaper networking service that uses the transit networks that deliver the bulk of traffic to internet service providers, said Prajakta Joshi, product manager for cloud networking at Google.\nThe new “Standard Tier” should offer performance comparable to what customers would experience through “other cloud providers,” Joshi said, although both Amazon Web Services and Microsoft Azure operate fiber networks outside of the public internet. A basic networking 101 reminder: most internet traffic passes through a number of different intersections from its source on the way to its destination, but Google’s “Premium Tier” network was built outside that system to support its global search ambitions by reducing the number of “hops” data is forced to take along the way.\n"], ["author", "Geek Wire"], ["tags", "Google"], ["created_at", "2019-01-11 04:12:09.440564"], ["updated_at", "2019-01-11 04:12:09.440564"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Create (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-01-11 04:12:09.444964"], ["updated_at", "2019-01-11 04:12:09.444964"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:25
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:12:35 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.5ms)
+
+
+  
+RuntimeError (Circular dependency detected while autoloading constant ArticleSerializer):
+  
+app/serializers/article_serializer.rb:1:in `<main>'
+app/controllers/api/v1/articles_controller.rb:10:in `index'
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:20:17 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.5ms)
+
+
+  
+LoadError (Unable to autoload constant ArticleSerializer, expected /home/jrod/Desktop/backendapi/app/serializers/article_serializer.rb to define it):
+  
+app/controllers/api/v1/articles_controller.rb:10:in `index'
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:20:44 -0500
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.1ms)
+
+
+  
+RuntimeError (Circular dependency detected while autoloading constant ArticleSerializer):
+  
+app/serializers/article_serializer.rb:1:in `<main>'
+app/controllers/api/v1/articles_controller.rb:10:in `index'
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:21:50 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.4ms)
+
+
+  
+RuntimeError (Circular dependency detected while autoloading constant ArticleSerializer):
+  
+app/serializers/article_serializer.rb:1:in `<main>'
+app/controllers/api/v1/articles_controller.rb:10:in `index'
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:25:15 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:25:58 -0500
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:26:33 -0500
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.62ms)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:26:53 -0500
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.38ms)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:33:40 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.44ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:35:29 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.55ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:38:38 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.23ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:38:38 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.96ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:38:56 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.95ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:38:59 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:38:59 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.94ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.39ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:40:01 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:40:01 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.32ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mArticle Load (6.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.62ms)
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:40:39 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:40:39 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.44ms)
+  [1m[36mArticle Load (4.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+
+
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.59ms)
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:41:00 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:41:00 -0500
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.25ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+
+
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.4ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:43:12 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:43:12 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.32ms)
+  [1m[36mArticle Load (6.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.3ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.07ms)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:45:06 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:45:06 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.51ms)
+  [1m[36mArticle Load (5.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.1ms)
+
+
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.66ms)
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:49:00 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:49:00 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.58ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mArticle Load (4.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.94ms)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:49:27 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:49:27 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.92ms)
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.51ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:52:47 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.6ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:53:03 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:53:03 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.24ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mArticle Load (5.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.7ms)
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:53:13 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:53:13 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.38ms)
+  [1m[36mArticle Load (5.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.6ms)
+
+
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.43ms)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:53:40 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:53:40 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.64ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mArticle Load (5.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.97ms)
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:53:43 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:53:43 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.69ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mArticle Load (9.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.66ms)
+Completed 200 OK in 20ms (Views: 10.7ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:54:32 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:54:32 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.06ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mArticle Load (10.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.31ms)
+Completed 200 OK in 18ms (Views: 7.7ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:57:16 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.36ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:57:16 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.03ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:57:48 -0500
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.42ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:58:05 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:58:05 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.16ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mArticle Load (5.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.34ms)
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:58:22 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:58:22 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.25ms)
+  [1m[36mArticle Load (5.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.9ms)
+
+
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.02ms)
+Completed 200 OK in 14ms (Views: 7.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:58:56 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:58:56 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.25ms)
+  [1m[36mArticle Load (6.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.8ms)
+
+
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.65ms)
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:59:10 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:59:10 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.6ms)
+  [1m[36mArticle Load (5.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+
+
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.64ms)
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-10 23:59:21 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.67ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:00:06 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.31ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:00:20 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.25ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:00:25 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:00:25 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.69ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mArticle Load (4.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.73ms)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:00:33 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:00:33 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.25ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mArticle Load (6.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.87ms)
+Completed 200 OK in 12ms (Views: 5.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:01:08 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:01:08 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.21ms)
+  [1m[36mArticle Load (5.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.6ms)
+
+
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.57ms)
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:01:14 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:01:14 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.66ms)
+  [1m[36mArticle Load (5.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.9ms)
+
+
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.79ms)
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:03 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:03 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.97ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mArticle Load (5.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.91ms)
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:03 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:03 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.87ms)
+  [1m[36mArticle Load (5.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.6ms)
+
+
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.21ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:21 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:21 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:21 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:21 -0500
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+Processing by Api::V1::ArticlesController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.13ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.27ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 1.1ms)
+
+
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.38ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 3.0ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.42ms)
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:41 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:41 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.15ms)
+  [1m[36mArticle Load (7.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.6ms)
+
+
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.32ms)
+Completed 200 OK in 14ms (Views: 6.8ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:41 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:41 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.05ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mArticle Load (6.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.08ms)
+Completed 200 OK in 13ms (Views: 6.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:48 -0500
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:03:48 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.94ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mArticle Load (4.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.74ms)
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:05:13 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.17ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:06:21 -0500
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.1ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:24:32 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.4ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:43:05 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.43ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:43:09 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.75ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:43:11 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.43ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-11 00:43:18 -0500
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.48ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+

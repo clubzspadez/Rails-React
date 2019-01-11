@@ -17,7 +17,7 @@ module Api
 
       # POST /articles
       def create
-        @article = Article.new(article_params)
+        @article = Article.create(article_params)
 
         if @article.save
           render json: @article, status: :created, location: @article

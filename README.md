@@ -1,55 +1,24 @@
-# Welltok Submission
+# README
 
-This is my submission for the coding challenge. Built with Ruby  on Rails, React, Redux, React-Router, react-bootstrap, Postgres
-This project is still unfinished, however, I wanted to send it in on time so it could be reviewed. Any feedback is appreciated.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Installation
+Things you may want to cover:
 
-Use git to clone the repository [repo](git@github.com:clubzspadez/Rails-React.git)
+* Ruby version
 
+* System dependencies
 
-## Usage
+* Configuration
 
-```
-#navigate into the folder
-cd Rails-React
+* Database creation
 
-#once on master
-git fetch -all
-git checkout jrchallenge
+* Database initialization
 
-#installed the necessary gems
-bundle install
+* How to run the test suite
 
-#create the tables in the database
-rake db:create
+* Services (job queues, cache servers, search engines, etc.)
 
-#create records in the database based on seed data
-# to find csv check lib/seeds/import.csv
-rake db:seed
+* Deployment instructions
 
-#start rails server --> set to host on port 5000
-rails s
-
-#in a new terminal navigate to client folder
-cd client
-
-#install dependencies
-npm install 
-
-#start client server --> port 3000
-npm start
-```
-
-## Common issues
-- Seeding reports that rake has been aborted due to ActiveRecord not being unique
-- Running 'rails console' > 'Article.all' shows that articles from the .csv are being imported to the ActiveRecord table
-
-- ran into issues with 'class Article Serializer < ActiveModel::Article Serializer attributes :title, :description, :author, :tags'
-
-- had to re-create my Serializer, after my data was showing up
-
-
-
-## Acknowledgment
-Shout out to Erica for giving me an opportunity to do this challenge. To be honest I was a bit rusty on my Ruby/Rails so this took me some time to complete and put together. You can check my commits on jrchallenge, and I'm more than happy to talk about my process.
+* ...
