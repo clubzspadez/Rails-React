@@ -7,8 +7,6 @@ This project is still unfinished, however, I wanted to send it in on time so it 
 
 Use git to clone the repository [repo](git@github.com:clubzspadez/Rails-React.git)
 
-git clone git@github.com:clubzspadez/Rails-React.git
-
 
 ## Usage
 
