@@ -12,7 +12,7 @@ git clone git@github.com:clubzspadez/Rails-React.git
 
 ## Usage
 
-
+```
 #navigate into the folder
 cd Rails-React
 
@@ -41,7 +41,7 @@ npm install
 
 #start client server --> port 3000
 npm start
-
+```
 
 ## Common issues
 - Seeding reports that rake has been aborted due to ActiveRecord not being unique
