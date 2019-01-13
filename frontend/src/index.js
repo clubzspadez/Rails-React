@@ -8,8 +8,9 @@ import allReducers from './reducers/index';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route} from 'react-router-dom';
+import promiseMiddleware from 'redux-promise';
 
-const store = createStore( allReducers, applyMiddleware())
+const store = createStore( allReducers, applyMiddleware(promiseMiddleware));
 
 
 ReactDOM.render(

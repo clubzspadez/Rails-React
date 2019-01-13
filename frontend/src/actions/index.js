@@ -1,19 +1,11 @@
-import { GET_ARTICLES , CREATE_ARTICLE} from './types';
+import { GET_ARTICLES , CREATE_ARTICLE, GET_ARTICLE, DELETE_ARTICLE} from './types';
 import  axios from 'axios'
 
 const API_URL = 'http://localhost:5000/api/v1';
 
 
-//returns 
- const getArticles =  () => {
-    try {
-        return  axios.get(`${API_URL}/articles`)
-    } catch(error){
-        console.log(error)
-    }
-}
 
-export function articles() {
+export function getArticles() {
     const request = new Promise((resolve, reject) => {
         axios.get(`${API_URL}/articles`).then(response => resolve(response.data))
     });
