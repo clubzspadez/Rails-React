@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="">
-       <div>
-       <h2>Imported Articles from database</h2>
-       
-            <Link to="/articles">View Imported Articles</Link>
+    <div className="col-12 col-md-9">
+       <div className="jumbotron">
+       <h1>WellTok Submission</h1>
+        <p>Trough this link we will get the seeded data from our import.csv. </p>
+            <Link to="/articles">Import</Link>
         </div>
     </div>
   )
