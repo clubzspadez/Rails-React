@@ -6,9 +6,7 @@ import {connect} from 'react-redux'
 
 
 class NewArticle extends Component {
-    constructor(props){
-        super(props);
-    }
+    
     static contextTypes = {
         handleSubmit: PropTypes.func,
         router: PropTypes.object,
@@ -18,15 +16,12 @@ class NewArticle extends Component {
     onSubmit(props){
         createArticle(props).
         then(() => {
-            this.props.context.history.push('/');
+            this.props.history.push('/');
         }).catch((err) => {
             console.log(err)
-        })
-
-        
+        }) 
 
     }
-
 
   render() {
     const { fields:{title, description, author, tags}, handleSubmit} = this.props;

@@ -47,8 +47,10 @@ export function createArticle(props) {
   }
   
   export function getArticle(id){
-    const request = axios.get(`${API_URL}/articles/${id}`);
-  
+    const request =  new Promise((resolve, reject) => {
+        return axios.get(`${API_URL}/articles/${id}`).then(response => {
+            resolve((response.data))});
+        });
     return{
       type: GET_ARTICLE,
       payload: request

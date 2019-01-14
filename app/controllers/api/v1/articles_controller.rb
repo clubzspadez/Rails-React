@@ -12,7 +12,7 @@ module Api
 
       # GET /articles/:id
       def show
-        render json: @article
+        render json: @article = Article.find(params[:id])
       end
 
       # POST /articles

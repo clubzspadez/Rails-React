@@ -1,4 +1,4 @@
-import { GET_ARTICLES } from '../actions/types';
+import { GET_ARTICLES, GET_ARTICLE } from '../actions/types';
 
 const InitState = { all: [], article:null};
 
@@ -9,6 +9,11 @@ export default function(state = InitState, action){
                 ...state,
                 all: action.payload
             };
+        case GET_ARTICLE:
+            return { 
+                ...state, 
+                article: action.payload
+            } ;
         default:
         return state;
         
