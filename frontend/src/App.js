@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 import Articles from './components/Articles';
 import './App.css';
 import Home from './components/Home';
 import Article from './components/Article';
 import NewArticle from './components/NewArticle';
+import NavBar from './components/NavBar';
 
 
 class App extends Component {
@@ -15,10 +16,16 @@ class App extends Component {
           <Switch>
            <div className="container text-center">
             <div class="row row-offcanvas row-offcanvas-right">
-              <Route exact path="/" component={Home} />
-              <Route exact path="/articles" component={Articles} />
-              <Route exact path="/articles/:article" component={Article} />
-              <Route exact path="/articles/new" component={NewArticle} />
+              <div class="col-12 col-md-12">
+                <div class="jumbotron">
+                <NavBar/>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/articles" component={Articles} />
+                <Route exact path="/articles/new" component={NewArticle} />
+                <Route exact path="/articles/:id" component={Article} />
+                
+                </div>
+              </div>
             </div>
           </div>
           </Switch>

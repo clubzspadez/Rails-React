@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import {reduxForm} from 'redux-form';
+import {reduxForm, Field} from 'redux-form';
 import { createArticle } from '../actions/index';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux'
 
 
 class NewArticle extends Component {
@@ -15,30 +16,34 @@ class NewArticle extends Component {
     }
     //will return a promise(axios)
     onSubmit(props){
-        this.props.createArticle(props).
+        createArticle(props).
         then(() => {
-            this.context.router.push('/');
+            this.props.context.history.push('/');
         }).catch((err) => {
             console.log(err)
         })
+
+        
+
     }
+
 
   render() {
     const { fields:{title, description, author, tags}, handleSubmit} = this.props;
     return (
-      <div>
+      <div className="container">
         <h1>Create an Article</h1>
 
         <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
             <div className="form-group">
                 <label>Title</label>
-                <input type="text" className="form-control" {...title}/>
+                <Field name="article[title]" component="input" type="text" />
                 <label>Description</label>
-                <input type="text" className="form-control" {...description}/>
+                <Field name="article[description]" component="input" type="text"/>
                 <label>Author</label>
-                <input type="text" className="form-control" {...author}/>
+                <Field name="article[author]" component="input" type="text"/>
                 <label>Tags</label>
-                <input type="text" className="form-control" {...tags}/>
+                <Field name="article[tags]" component="input" type="text"/>
             </div>
             <button type="submit" className="btn btn-success">Create Article</button>
         </form>
@@ -47,7 +52,12 @@ class NewArticle extends Component {
   }
 }
 
-export default reduxForm({
-    form:'NewArticleForm',
+
+
+
+NewArticle = reduxForm({
+    form: 'NewArticle',
     fields: ['title', 'description', 'author', 'tags']
-}, null, { createArticle})(NewArticle)
+})(NewArticle);
+
+export default NewArticle;

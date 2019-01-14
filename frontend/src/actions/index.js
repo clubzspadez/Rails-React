@@ -17,15 +17,25 @@ export function getArticles() {
 }
 
 export function createArticle(props) {
-    const request =  axios.post(`${API_URL}/articles`, props)
-    
-    return {
-        type: CREATE_ARTICLE,
-        payload: request
- 
- 
-    }
+        console.log(props)
+       return axios.post(`${API_URL}/articles`, props)
+        .then(response => {
+            console.log(response);
+            return JSON.stringify(response.data);
+        })
+        // console.log(props);
+
+        // axios({
+        //     method: 'post',
+        //     url:`${API_URL}/articles`,
+        //     data: {
+        //       title: 'Fred',
+        //       description: 'Flintstone',
+        //       author:'Test'
+        //     }
+        //   });
 }
+
   
   export function deleteArticle(id){
     const request = axios.delete(`${API_URL}/articles/${id}`);

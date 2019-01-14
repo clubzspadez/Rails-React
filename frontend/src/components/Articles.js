@@ -8,8 +8,9 @@ import {
   getArticles
 } from '../actions/index';
 import {
-  Link
+  Link, Route
 } from 'react-router-dom'
+import Article from './Article';
 
 
 
@@ -24,8 +25,10 @@ class Articles extends Component {
     return this.props.articles.map((article) => {
       return ( 
       <li className="list-group-item" key={article.id}>
-      <Link to={"articles/" + article.id}>
-        <h4>{article.title}</h4>
+      <h3>{article.title}</h3>
+      <img src="https://via.placeholder.com/400x150" class="img-fluid" alt="Responsive image"/>
+      <Link to={`articles/${article.id}`}>
+        <a class="btn btn-secondary" role="button"><strong>View details</strong> &raquo;</a>
       </Link>  
       </li> 
       )
@@ -34,18 +37,17 @@ class Articles extends Component {
   render() {
     return ( 
       <div class="container">
-        <div class="col-12 col-md-9">
-          <div class="jumbotron">
+       
             <h1>Articles</h1>
             <div class="row">
-              <div class="col-6 col-lg-4">
+              <div class="col-12 col-lg-12">
               <ul className="list-group list-group-flush">
               {this.renderArticles()}
               </ul>
               </div>
             </div>
-          </div>
-        </div>
+              
+            <Route exact path="/articles/:articleId" component={Article} />
       </div>
 
             

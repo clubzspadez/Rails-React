@@ -10,7 +10,7 @@ module Api
         render json: @articles
       end
 
-      # GET /articles/1
+      # GET /articles/:id
       def show
         render json: @article
       end
