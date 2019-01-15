@@ -30,7 +30,9 @@ export function createArticle(props) {
 
   
   export function deleteArticle(id){
-    const request = axios.delete(`${API_URL}/articles/${id}`);
+    const request = axios.delete(`${API_URL}/articles/${id}`).then(response => {
+        return response.data
+     });
   
     return{
       type: DELETE_ARTICLE,

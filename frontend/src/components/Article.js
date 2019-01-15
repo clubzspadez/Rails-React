@@ -3,7 +3,7 @@ import {
   connect
 } from 'react-redux';
 import {
-  getArticle
+  getArticle, deleteArticle
 } from '../actions/index';
 
 
@@ -14,17 +14,27 @@ class Article extends Component {
     this.props.getArticle(this.props.match.params.id);
   }
 
+  handleDelete(e){
+    this.props.deleteArticle(this.props.match.params.id);
+    setTimeout( () =>{
+      this.props.history.push('/articles');
+    }, 1000);
+
+  }
   
 
   renderArticle(article) {
     console.log(article);
     return (
       <div>
-        <h1>Title: {article.title}</h1>
-        <h5>author {article.author}</h5>
-        <p>Description:{article.description}</p>
-        <span>Tags{article.tags}</span>
-    
+        <h1>{article.title}</h1>
+        <h5>{article.author}</h5>
+        <p>{article.description}</p>
+        <span>Tags:  <em>{article.tags}</em></span>
+        <div>
+        <br/>
+        <button className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete Article</button>
+        </div>
       </div>
     )
   }
@@ -54,7 +64,8 @@ function mapStateToProps(state){
 }
 export default connect(mapStateToProps, 
   { 
-    getArticle: getArticle 
+    getArticle: getArticle,
+    deleteArticle: deleteArticle
   })(Article);
 
 

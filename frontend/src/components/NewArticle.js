@@ -14,13 +14,8 @@ class NewArticle extends Component {
     }
     //will return a promise(axios)
     onSubmit(props){
-        createArticle(props).
-        then(() => {
-            this.props.history.push('/');
-        }).catch((err) => {
-            console.log(err)
-        }) 
-
+        createArticle(props);
+        this.props.history.push('/articles');
     }
 
   render() {
