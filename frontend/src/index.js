@@ -2,16 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Articles from './components/Articles';
 import * as serviceWorker from './serviceWorker';
 import allReducers from './reducers/index';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route} from 'react-router-dom';
 import promiseMiddleware from 'redux-promise';
 import thunk from 'redux-thunk';
 
-const store = createStore( allReducers, applyMiddleware(promiseMiddleware, thunk));
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore( allReducers, composeEnhancers(
+    applyMiddleware(promiseMiddleware, thunk) 
+    ));
 
 
 ReactDOM.render(

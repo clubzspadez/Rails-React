@@ -9,7 +9,8 @@ export function getArticles() {
     const request = new Promise((resolve, reject) => {
         axios.get(`${API_URL}/articles`).then(response => resolve(response.data))
     });
-    
+
+
         return {
         type: GET_ARTICLES,
         payload: request
@@ -25,15 +26,6 @@ export function createArticle(props) {
         })
         // console.log(props);
 
-        // axios({
-        //     method: 'post',
-        //     url:`${API_URL}/articles`,
-        //     data: {
-        //       title: 'Fred',
-        //       description: 'Flintstone',
-        //       author:'Test'
-        //     }
-        //   });
 }
 
   
@@ -47,11 +39,12 @@ export function createArticle(props) {
   }
   
   export function getArticle(id){
-    const request =  new Promise((resolve, reject) => {
-        return axios.get(`${API_URL}/articles/${id}`).then(response => {
-            resolve((response.data))});
+    const request = axios.get(`${API_URL}/articles/${id}`).then(response => {
+           return response.data
         });
-    return{
+
+
+    return {
       type: GET_ARTICLE,
       payload: request
     }; 

@@ -18,25 +18,25 @@ import Article from './Article';
 class Articles extends Component {
 
   componentDidMount() {
-    console.log(this.props.getArticles());
+    this.props.getArticles();
   }
 
   renderArticles() {
     return this.props.articles.map((article) => {
       return ( 
       <li className="list-group-item" key={article.id}>
-      <h3>{article.title}</h3>
-      <img src="https://via.placeholder.com/400x150" class="img-fluid" alt="Responsive image"/>
-      <Link to={`articles/${article.id}`}>
-        <a class="btn btn-secondary" role="button"><strong>View details</strong> &raquo;</a>
-      </Link>  
+        <h3>{article.title}</h3>
+        <img src="https://via.placeholder.com/400x150" className="img-fluid" alt="Responsive image"/>
+        <Link to={`articles/${article.id}`}>
+          <a className="btn btn-secondary" role="button"><strong>View details</strong> &raquo;</a>
+        </Link>  
       </li> 
       )
     });
   }
   render() {
     return ( 
-      <div class="container">
+      <div className="container">
        
             <h1>Articles</h1>
             <div className="row">
@@ -67,6 +67,8 @@ class Articles extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log(state)
+
   return {
     articles: state.articles.all
   }

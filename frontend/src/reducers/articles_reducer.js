@@ -1,8 +1,11 @@
 import { GET_ARTICLES, GET_ARTICLE } from '../actions/types';
 
-const InitState = { all: [], article:null};
+const initialState = { 
+    all: [], 
+    article:{}
+};
 
-export default function(state = InitState, action){
+export default function(state = initialState, action){
     switch(action.type){
         case GET_ARTICLES:
             return {
