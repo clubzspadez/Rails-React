@@ -13,22 +13,22 @@ class App extends Component {
     return (
       
       <BrowserRouter >
-          <Switch>
+          
            <div className="container text-center">
             <div className="row row-offcanvas row-offcanvas-right">
               <div className="col-12 col-md-12">
                 <div className="jumbotron">
                 <NavBar/>
+                <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/articles" component={Articles} />
                 <Route exact path="/articles/new" component={NewArticle} />
                 <Route exact path="/articles/:id" component={Article} />
-                
+                </Switch>
                 </div>
               </div>
             </div>
           </div>
-          </Switch>
       </BrowserRouter> 
     );
   }

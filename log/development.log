@@ -47811,3 +47811,59 @@ Processing by Api::V1::ArticlesController#index as HTML
 Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-14 20:55:40 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.54ms)
+Completed 200 OK in 23ms (Views: 14.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-14 20:55:42 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.32ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/articles/5" for 127.0.0.1 at 2019-01-14 20:55:43 -0500
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:46
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:15
+[active_model_serializers] Rendered ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-14 22:08:50 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.89ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/articles/5" for 127.0.0.1 at 2019-01-14 22:08:53 -0500
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:46
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:15
+[active_model_serializers] Rendered ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (1.03ms)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/articles" for 127.0.0.1 at 2019-01-14 22:13:41 -0500
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.82ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
