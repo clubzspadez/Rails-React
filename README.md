@@ -1,7 +1,7 @@
 # Welltok Submission
 
 This is my submission for the coding challenge. Built with Ruby  on Rails, React, Redux, React-Router, react-bootstrap, Postgres
-This project is still unfinished, however, I wanted to send it in on time so it could be reviewed. Any feedback is appreciated.
+Any feedback is appreciated.
 
 ## Installation
 
@@ -11,6 +11,8 @@ Use git to clone the repository [repo](git@github.com:clubzspadez/Rails-React.gi
 ## Usage
 
 ```
+git clone git@github.com:clubzspadez/Rails-React.git
+
 #navigate into the folder
 cd Rails-React
 
@@ -41,7 +43,7 @@ npm install
 npm start
 ```
 
-## Common issues
+## Common issues I ran into
 - Seeding reports that rake has been aborted due to ActiveRecord not being unique
 - Running 'rails console' > 'Article.all' shows that articles from the .csv are being imported to the ActiveRecord table
 
@@ -49,6 +51,7 @@ npm start
 
 - had to re-create my Serializer, after my data was showing up
 
+- working with promises in redux required middleware like promise-redux
 
 
 ## Acknowledgment
