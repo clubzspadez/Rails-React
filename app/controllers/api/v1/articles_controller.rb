@@ -10,14 +10,14 @@ module Api
         render json: @articles
       end
 
-      # GET /articles/1
+      # GET /articles/:id
       def show
-        render json: @article
+        render json: @article = Article.find(params[:id])
       end
 
       # POST /articles
       def create
-        @article = Article.new(article_params)
+        @article = Article.create(article_params)
 
         if @article.save
           render json: @article, status: :created, location: @article
